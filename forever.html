@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>永远陪你宝贝</title>
+	
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	
+	<link href="./css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/garden.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content" style="width: 1160px; height: 625px; margin-top: 52px; margin-left: 220px;">
+			<div id="code" style="margin-top: 62.5px;">
+			
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden" width="670" height="625"></canvas>
+				<div id="words">
+					<div id="messages"  style="width:250px;display: block;color: #e913ec;">
+						&nbsp;&nbsp;大屁孩 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<br> 我与你相遇有<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<br>
+						<div id="elapseClock">&nbsp;&nbsp;&nbsp;&nbsp;<span class="digit">382</span> 天 <span class="digit">17</span> 时 <span class="digit"><br>&nbsp;&nbsp;07</span> 秒 <span class="digit">33</span> 分</div>
+					</div>
+					<div id="messages1"  style="width:250px; display: block;position: relative;float: right;margin-top: -50%;margin-right: -11%;color: #e913ec;">
+						&nbsp;&nbsp;小宝贝 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<br> 我们相识有<br> 
+						<br>
+						<div id="elapseClock1">&nbsp;&nbsp;&nbsp;&nbsp;<span class="digit">382</span> 天 <span class="digit">17</span> 时 <span class="digit"><br>&nbsp;&nbsp;07</span> 秒 <span class="digit">33</span> 分</div>
+					</div>
+					
+					<div id="loveu" style="color: #e913ec;">
+						陪你到老的小卢子<br>
+						<div class="signature"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 100);
+
+			timeElapse('2015/06/12 00:00:00');
+			timeElapse1('2017/03/11');
+			setInterval(function () {
+				timeElapse('2015/06/12 00:00:00');
+				timeElapse1('2017/03/11');
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+
+</body></html>
