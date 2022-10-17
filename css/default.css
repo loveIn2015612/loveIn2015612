@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: #FFFFEE;
+	background: linear-gradient(to bottom,#fddbff,#ffcffbc4);
 	font-size: 12px;
 	overflow: auto;
 }
